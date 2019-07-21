@@ -24,20 +24,26 @@
             <el-checkbox v-model="orSearch" true-value="OR" false-value=''>OR</el-checkbox>
           </div>
         </el-col>
+        <el-col :span="6">   
+          <div class="title">ストック数</div>
+          <div class="stock_slider"> 
+            <el-slider
+              v-model="stock"
+              :step="50"
+              :max="1000"
+              show-stops>
+            </el-slider>
+          </div>
+        </el-col>
         <el-col :span="6">
-            <div class="block">
-              <div class="title">ストック数</div>
-              <div class="stock_slider">
-                  
-                  <el-slider
-                    v-model="stock"
-                    :step="50"
-                    :max="1000"
-                    show-stops>
-                  </el-slider>
-                
-              </div>
-            </div>
+          <div class="title">タイトル 本文</div>
+          <div class="body_input">
+            <el-input
+              placeholder="Please input"
+              v-model="word"
+              clearable>
+            </el-input>
+          </div> 
         </el-col>
       </el-row>
       <el-row>

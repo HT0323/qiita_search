@@ -7,12 +7,11 @@
   padding-bottom: 20px;
 }
 .tag_select, .search_checkbox {
-  width: 300px;
+  width: 270px;
   margin: auto;
 }
 .el-input {
-  width: 300px;
-  
+  width: 270px;
   margin-bottom: 10px;
   margin-top: 10px;
 }
@@ -30,5 +29,10 @@
 .search_button {
   width: 100px;
   margin: auto;
+}
+.stock_slider {
+  width: 270px;
+  margin: auto;
+  margin-top: 15px;
 }
 

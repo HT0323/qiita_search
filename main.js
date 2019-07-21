@@ -6,6 +6,7 @@ var app = new Vue({
       tag1: '',
       tag2: '',
       orSearch: '',
+      stock: 0,
       message: ''
     },
     created: function() {
@@ -20,14 +21,14 @@ var app = new Vue({
         const vm = this
         const val = vm.orSearch ? 'OR' : '' ;
         this.message = 'loading....'
-        
         const params = {
                           page: 1,
                           per_page: 20,
                           query: 
                             `tag:${this.tag1}` + ' ' + 
                             val + ' ' +  
-                            `tag:${this.tag2}`
+                            `tag:${this.tag2}` + ' ' +
+                            `stocks:>${this.stock}`
                         }
         axios.get('https://qiita.com/api/v2/items', {params})
         .then(function(response) {

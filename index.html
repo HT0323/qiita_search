@@ -16,14 +16,28 @@
           </div>
           <div class="tag_select">
             <el-input placeholder="tag2" autocomplete="on" list="tags" v-model = "tag2"></el-input>
-          </div>
-          
+          </div> 
           <datalist id="tags">  
             <option v-for="tag in tags" v-bind:key="tag.id">{{tag.id}}</option>
           </datalist>
           <div class="search_checkbox">
             <el-checkbox v-model="orSearch" true-value="OR" false-value=''>OR</el-checkbox>
           </div>
+        </el-col>
+        <el-col :span="6">
+            <div class="block">
+              <div class="title">ストック数</div>
+              <div class="stock_slider">
+                  
+                  <el-slider
+                    v-model="stock"
+                    :step="50"
+                    :max="1000"
+                    show-stops>
+                  </el-slider>
+                
+              </div>
+            </div>
         </el-col>
       </el-row>
       <el-row>

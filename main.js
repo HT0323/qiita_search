@@ -7,6 +7,7 @@ var app = new Vue({
       tag2: '',
       orSearch: '',
       stock: 0,
+      word: '',
       message: ''
     },
     created: function() {
@@ -28,7 +29,9 @@ var app = new Vue({
                             `tag:${this.tag1}` + ' ' + 
                             val + ' ' +  
                             `tag:${this.tag2}` + ' ' +
-                            `stocks:>${this.stock}`
+                            `stocks:>${this.stock}` + ' ' +
+                            `body:${this.word}` + ' ' +
+                            `title:${this.word}`
                         }
         axios.get('https://qiita.com/api/v2/items', {params})
         .then(function(response) {

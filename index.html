@@ -45,6 +45,19 @@
             </el-input>
           </div> 
         </el-col>
+        <el-col :span="6">
+          <div class="title">投稿更新時期</div>
+          <div class="season_select">
+            <el-select v-model="value" placeholder="Select">
+                <el-option
+                  v-for="item in seasons"
+                  :key="item.value"
+                  :label="item.label"
+                  :value="item.value">
+                </el-option>
+              </el-select>
+          </div>  
+        </el-col>
       </el-row>
       <el-row>
         <el-col :span="8"><div class="grid-content bg-purple"></div></el-col>
